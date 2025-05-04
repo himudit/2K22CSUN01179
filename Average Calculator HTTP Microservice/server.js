@@ -8,6 +8,7 @@ const PORT = 9876;
 // getting token from .env
 const Token = process.env.TOKEN;
 
+// initilazing window size
 const win_size = 10;
 let arr = [];
 
@@ -26,6 +27,7 @@ app.get('/numbers/:numberid', async (req, res) => {
         return res.status(400).json({ error: 'Invalid number ID' });
     }
 
+    // storing previous in winPrevState
     const winPrevState = [...arr];
     let fetchedNumbers = [];
 
